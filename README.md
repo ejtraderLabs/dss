@@ -31,3 +31,10 @@ docker run --gpus all -d -it -p 10000:10000 --name dss \
     ejtrader/dss:cpu
 
 ```
+
+#### Acess web gui
+
+```
+http://localhost:10000/
+
+```
