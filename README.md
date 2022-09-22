@@ -8,7 +8,7 @@ docker run --gpus all -d -it -p 10000:10000 -v $(pwd)/data:/root  --user dataiku
 
 ```
 
-# Run on docker without Nvidia Support
+### Run on docker without Nvidia Support
 
 
 
