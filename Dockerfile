@@ -48,7 +48,8 @@ RUN dnf -y update
 RUN rpm -q epel-release
 RUN yum config-manager --add-repo http://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo
 RUN dnf -y install kernel-devel
-RUN yum -y install cuda-11-6-11.6.0-1
+RUN yum -y install cuda-11.6.2-1.x86_64
+
 
 # Build R 3.6 from source
 COPY build-r36.sh /tmp/

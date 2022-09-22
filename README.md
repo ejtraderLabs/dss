@@ -1,4 +1,4 @@
-# Dataiku docker 
+# Dataiku docker cuda 11.6.2
 
 
 ### Run on docker with Nvidia support
