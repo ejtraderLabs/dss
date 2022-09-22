@@ -39,8 +39,8 @@ RUN yum install -y \
         libXScrnSaver \
         alsa-lib \
         libX11-xcb \
-        python2-devel \
         python36-devel \
+        python37-devel \
     && yum clean all
 
 RUN dnf -y install epel-release
