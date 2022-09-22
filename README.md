@@ -3,8 +3,16 @@
 
 ### Run on docker with Nvidia support
 
+
 ```
-docker run --gpus all -d -it -p 10000:10000 -v $(pwd)/data:/root  --user dataiku ejtrader/dss 
+docker volume create dss
+
+docker run --gpus all -d -it -p 10000:10000 --name dss \
+    --restart=unless-stopped \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v dss:/root \
+    --user dataiku \
+    ejtrader/dss:gpu
 
 ```
 
@@ -13,6 +21,13 @@ docker run --gpus all -d -it -p 10000:10000 -v $(pwd)/data:/root  --user dataiku
 
 
 ```
-docker run -d -it -p 10000:10000 -v $(pwd)/data:/root  --user dataiku ejtrader/dss \
+docker volume create dss
+
+docker run --gpus all -d -it -p 10000:10000 --name dss \
+    --restart=unless-stopped \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v dss:/root \
+    --user dataiku \
+    ejtrader/dss:cpu
 
 ```
