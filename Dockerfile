@@ -87,4 +87,3 @@ EXPOSE $DSS_PORT
 CMD [ "/home/dataiku/run.sh" ]
 
 
-#docker run --gpus all -d -it -p 10000:10000 -v $(pwd)/data:/root  --user dataiku ejtrader/dss 
