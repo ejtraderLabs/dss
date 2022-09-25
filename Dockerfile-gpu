@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.6.2-devel-rockylinux8
+FROM nvidia/cuda:11.7.0-cudnn8-runtime-rockylinux8
 
 ARG dssVersion
 

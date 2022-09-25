@@ -1,4 +1,4 @@
-# Dataiku docker cuda 11.6.2
+# Dataiku docker cuda 11.7.0
 
 
 ### Run on docker with Nvidia support
@@ -36,5 +36,28 @@ docker run --gpus all -d -it -p 10000:10000 --name dss \
 
 ```
 http://localhost:10000/
+
+```
+
+
+### To build image from source
+
+#### clone repository
+
+```
+git clone https://github.com/ejtraderLabs/dss
+cd dss
+```
+
+#### For GPU
+```
+docker build --build-arg dssVersion=11.0.2 -t ejtrader/dss:gpu -f Dockerfile-gpu .
+
+```
+
+#### For CPU
+
+```
+docker build --build-arg dssVersion=11.0.2 -t ejtrader/dss:cpu -f Dockerfile-cpu .
 
 ```
