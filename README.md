@@ -1,3 +1,6 @@
+
+![example workflow](https://github.com/ejtraderLabs/dss/actions/workflows/main.yml/badge.svg)
+
 # Dataiku docker cuda 11.7.0
 
 
