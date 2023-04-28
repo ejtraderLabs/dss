@@ -1,6 +1,6 @@
 FROM almalinux:8
 
-ARG dssVersion
+ARG dssVersion=11.0.2
 
 ENV DSS_VERSION="$dssVersion" \
     DSS_DATADIR="/home/dataiku/dss" \
