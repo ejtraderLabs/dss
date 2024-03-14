@@ -32,7 +32,7 @@ jobs:
           file: ./Dockerfile-gpu
           platforms: linux/amd64
           push: true
-          tags: ejtraderlabs/dss:gpu
+          tags: ejtrader/dss:gpu
       -
         name: Build and push DSS cpu
         uses: docker/build-push-action@v3
@@ -40,4 +40,4 @@ jobs:
           file: ./Dockerfile-cpu
           platforms: linux/amd64
           push: true
-          tags: ejtraderlabs/dss:cpu
+          tags: ejtrader/dss:cpu
