@@ -13,11 +13,10 @@ RUN useradd dataiku \
     && chown -Rh dataiku:dataiku /home/dataiku ${DSS_DATADIR}
 
 # System dependencies
-RUN dnf config-manager --enable crb
+RUN dnf config-manager --enable crb -y
 RUN yum install -y \
         epel-release \
-    && yum install -y --enablerepo=powertools \
-        glibc-langpack-en \
+    && yum install -y glibc-langpack-en \
         file \
         acl \
         expat \
